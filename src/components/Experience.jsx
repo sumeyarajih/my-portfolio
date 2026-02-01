@@ -1,0 +1,61 @@
+import React from 'react';
+
+const Experience = () => {
+    const experiences = [
+        {
+            role: "Senior Software Engineer",
+            company: "Tech Solutions Inc.",
+            period: "2023 - Present",
+            description: "Leading the mobile development team using Flutter and integrating with Laravel backend APIs."
+        },
+        {
+            role: "Full Stack Developer",
+            company: "Creative Digital Agency",
+            period: "2021 - 2023",
+            description: "Developed and maintained multiple client websites using React, Vue, and implemented database solutions with PostgreSQL."
+        },
+        {
+            role: "UI/UX Designer",
+            company: "Freelance",
+            period: "2019 - 2021",
+            description: "Designed user-centric interfaces for mobile apps and web platforms, conducting user research and prototyping."
+        }
+    ];
+
+    return (
+        <section id="experience" className="section-padding bg-light/30">
+            <div className="container mx-auto max-w-4xl">
+                <h2 className="text-4xl font-header font-bold text-dark mb-16 text-center">Work Experience</h2>
+
+                <div className="relative">
+                    {/* Vertical Line */}
+                    <div className="absolute left-[19px] top-0 bottom-0 w-0.5 bg-gray-200 md:left-1/2 md:-ml-px"></div>
+
+                    {experiences.map((exp, index) => (
+                        <div key={index} className={`relative flex items-start mb-12 md:mb-0 ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} md:justify-between group`}>
+
+                            {/* Dot */}
+                            <div className="absolute left-0 w-10 h-10 bg-white border-4 border-primary rounded-full z-10 md:left-1/2 md:-ml-5 flex items-center justify-center">
+                                <div className="w-2.5 h-2.5 bg-primary rounded-full"></div>
+                            </div>
+
+                            {/* Content */}
+                            <div className="ml-16 md:ml-0 md:w-[45%] p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                                <span className="inline-block px-3 py-1 mb-3 text-xs font-bold tracking-wider text-primary uppercase bg-primary/5 rounded-full">
+                                    {exp.period}
+                                </span>
+                                <h3 className="text-xl font-bold text-dark mb-1">{exp.role}</h3>
+                                <h4 className="text-gray-500 font-medium mb-4">{exp.company}</h4>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    {exp.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Experience;
