@@ -1,13 +1,20 @@
 import React from 'react';
 import { FaInstagram, FaLinkedin, FaGithub, FaTwitter, FaDownload } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <section id="about" className="section-padding bg-white">
+        <section id="about" className="section-padding bg-white overflow-hidden">
             <div className="container mx-auto">
                 <div className="flex flex-col md:flex-row items-center gap-12">
-                    {/* Image Side */}
-                    <div className="w-full md:w-1/2 flex justify-center">
+                    {/* Image Side - Animated from Left */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: false }}
+                        className="w-full md:w-1/2 flex justify-center"
+                    >
                         <div className="relative w-72 h-80 md:w-96 md:h-[450px]">
                             <div className="absolute top-4 left-4 w-full h-full border-2 border-primary rounded-2xl z-0"></div>
                             <img
@@ -16,10 +23,16 @@ const About = () => {
                                 className="w-full h-full object-cover rounded-2xl shadow-lg relative z-10"
                             />
                         </div>
-                    </div>
+                    </motion.div>
 
-                    {/* Content Side */}
-                    <div className="w-full md:w-1/2">
+                    {/* Content Side - Animated from Right */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: false }}
+                        className="w-full md:w-1/2"
+                    >
                         <span className="text-primary font-bold tracking-wider uppercase mb-2 block">About Me</span>
                         <h2 className="text-4xl font-header font-bold text-dark mb-6">Passionate about creating <br /> meaningful digital solutions.</h2>
                         <p className="text-gray-600 leading-relaxed mb-6">
@@ -54,7 +67,7 @@ const About = () => {
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

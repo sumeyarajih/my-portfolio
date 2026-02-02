@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BsGithub, BsArrowUpRight } from 'react-icons/bs';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
     const [activeCategory, setActiveCategory] = useState("All");
@@ -67,42 +68,80 @@ const Projects = () => {
         ? projects
         : projects.filter(project => project.category === activeCategory);
 
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 50 },
+        show: { opacity: 1, y: 0 }
+    };
+
     return (
-        <section id="projects" className="section-padding bg-gray-50">
+        <section id="projects" className="section-padding bg-gray-50 overflow-hidden">
             <div className="container mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-                    <div className="mb-6 md:mb-0">
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: false }}
+                        className="mb-6 md:mb-0"
+                    >
                         <h2 className="text-4xl font-header font-bold text-dark mb-4">Featured <span className="text-primary">Projects</span></h2>
                         <p className="text-gray-600 max-w-xl">
                             Explore my latest work across different domains.
                         </p>
-                    </div>
+                    </motion.div>
 
-                    <div className="flex flex-wrap gap-2">
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: false }}
+                        className="flex flex-wrap gap-2"
+                    >
                         {categories.map(category => (
                             <button
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
                                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
-                                        ? 'bg-primary text-white shadow-lg shadow-primary/30'
-                                        : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                                    ? 'bg-primary text-white shadow-lg shadow-primary/30'
+                                    : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
                                     }`}
                             >
                                 {category}
                             </button>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false }}
+                    key={activeCategory}
+                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
                     {filteredProjects.map((project, index) => (
-                        <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+                        <motion.div
+                            key={index}
+                            variants={item}
+                            className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col"
+                        >
                             {/* Image Placeholder */}
                             <div className="h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative overflow-hidden group-hover:bg-gray-200 transition-colors">
                                 <div className="text-6xl transform group-hover:scale-110 transition-transform duration-500">{project.image}</div>
 
-                                {/* Overlay */}
-                                <div className="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                                {/* Overlay (Desktop) */}
+                                <div className="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex items-center justify-center gap-4">
                                     <a
                                         href={project.github}
                                         target="_blank"
@@ -134,9 +173,19 @@ const Projects = () => {
                                 <h3 className="text-xl font-bold text-dark mb-2 group-hover:text-primary transition-colors">
                                     {project.title}
                                 </h3>
-                                <p className="text-gray-600 text-sm mb-6 line-clamp-3">
+                                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                                     {project.description}
                                 </p>
+
+                                {/* Mobile Actions */}
+                                <div className="flex gap-3 mb-4 md:hidden">
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn-outline text-xs py-2 px-3 rounded-full flex items-center gap-2">
+                                        <BsGithub /> Code
+                                    </a>
+                                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs py-2 px-3 rounded-full flex items-center gap-2">
+                                        <BsArrowUpRight /> Live
+                                    </a>
+                                </div>
 
                                 <div className="mt-auto flex flex-wrap gap-2">
                                     {project.tags.map(tag => (
@@ -146,9 +195,9 @@ const Projects = () => {
                                     ))}
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

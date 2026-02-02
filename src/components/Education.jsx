@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGraduationCap } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Education = () => {
     const education = [
@@ -17,14 +18,48 @@ const Education = () => {
         }
     ];
 
-    return (
-        <div className="section-padding bg-gray-50">
-            <div className="container mx-auto max-w-4xl">
-                <h2 className="text-4xl font-header font-bold text-dark mb-12 text-center">Education <span className="text-primary">& Certification</span></h2>
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3
+            }
+        }
+    };
 
-                <div className="space-y-8">
+    const itemAnim = {
+        hidden: { opacity: 0, y: 30 },
+        show: { opacity: 1, y: 0 }
+    };
+
+    return (
+        <div className="section-padding bg-gray-50 overflow-hidden">
+            <div className="container mx-auto max-w-4xl">
+                <motion.h2
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: false }}
+                    className="text-4xl font-header font-bold text-dark mb-12 text-center"
+                >
+                    Education <span className="text-primary">& Certification</span>
+                </motion.h2>
+
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false }}
+                    className="space-y-8"
+                >
                     {education.map((item, index) => (
-                        <div key={index} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex gap-6 hover:shadow-lg transition-shadow duration-300">
+                        <motion.div
+                            key={index}
+                            variants={itemAnim}
+                            viewport={{ once: false }}
+                            className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex gap-6 hover:shadow-lg transition-shadow duration-300"
+                        >
                             <div className="hidden sm:flex w-16 h-16 bg-primary/10 rounded-full items-center justify-center text-primary flex-shrink-0">
                                 <FaGraduationCap size={30} />
                             </div>
@@ -38,9 +73,9 @@ const Education = () => {
                                     {item.description}
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </div>
     );

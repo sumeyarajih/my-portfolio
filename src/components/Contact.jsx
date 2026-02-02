@@ -1,18 +1,31 @@
 import React from 'react';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
     return (
-        <section id="contact" className="section-padding bg-gray-50">
+        <section id="contact" className="section-padding bg-gray-50 overflow-hidden">
             <div className="container mx-auto max-w-5xl">
-                <div className="text-center mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: false }}
+                    className="text-center mb-16"
+                >
                     <span className="text-primary font-bold tracking-wider uppercase mb-2 block">Get in Touch</span>
                     <h2 className="text-4xl font-header font-bold text-dark">Let's Work Together</h2>
-                </div>
+                </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-12 bg-white rounded-3xl shadow-xl overflow-hidden">
                     {/* Contact Info Side */}
-                    <div className="bg-dark p-10 text-white flex flex-col justify-between relative overflow-hidden">
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: false }}
+                        className="bg-dark p-10 text-white flex flex-col justify-between relative overflow-hidden"
+                    >
                         <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
 
                         <div>
@@ -57,10 +70,16 @@ const Contact = () => {
                         <div className="mt-12">
                             <p className="text-sm text-gray-500">© 2026 Sumeya Rajih Abass</p>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Contact Form Side */}
-                    <div className="p-10">
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: false }}
+                        className="p-10"
+                    >
                         <form className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
@@ -92,15 +111,17 @@ const Contact = () => {
                                 ></textarea>
                             </div>
 
-                            <button
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                                 type="submit"
                                 className="w-full btn-primary flex items-center justify-center gap-2"
                             >
                                 Send Message
                                 <FaPaperPlane className="text-sm" />
-                            </button>
+                            </motion.button>
                         </form>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
