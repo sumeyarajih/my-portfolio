@@ -10,42 +10,54 @@ const Projects = () => {
             category: "Mobile",
             image: "📱",
             description: "A complete mobile shopping experience with cart and payment integration using Flutter.",
-            tags: ["Flutter", "Dart", "Firebase"]
+            tags: ["Flutter", "Dart", "Firebase"],
+            github: "https://github.com/sumeya-rajih",
+            demo: "#"
         },
         {
             title: "Corporate Dashboard",
             category: "Website",
             image: "💻",
             description: "Admin panel for managing company resources and analytics visualization with React & Laravel.",
-            tags: ["React", "Laravel", "MySQL", "Tailwind"]
+            tags: ["React", "Laravel", "MySQL", "Tailwind"],
+            github: "https://github.com/sumeya-rajih",
+            demo: "#"
         },
         {
             title: "Portfolio Design System",
             category: "UI/UX",
             image: "🎨",
             description: "A comprehensive design system created in Figma for a client portfolio.",
-            tags: ["Figma", "Prototyping", "Design System"]
+            tags: ["Figma", "Prototyping", "Design System"],
+            github: "https://github.com/sumeya-rajih",
+            demo: "#"
         },
         {
             title: "Recipe Sharing Platform",
             category: "Website",
             image: "🍲",
             description: "Social platform for chefs to share and rate recipes built with Vue.js.",
-            tags: ["Vue", "Node.js", "PostgreSQL"]
+            tags: ["Vue", "Node.js", "PostgreSQL"],
+            github: "https://github.com/sumeya-rajih",
+            demo: "#"
         },
         {
             title: "Cinematic Travel Vlog",
             category: "Video",
             image: "🎬",
             description: "High-energy travel vlog with advanced color grading and motion graphics.",
-            tags: ["Premiere Pro", "After Effects", "Color Grading"]
+            tags: ["Premiere Pro", "After Effects", "Color Grading"],
+            github: "https://github.com/sumeya-rajih",
+            demo: "#"
         },
         {
             title: "Finance App Redesign",
             category: "UI/UX",
             image: "💳",
             description: "Modern UI redesign for a fintech application focusing on user accessibility.",
-            tags: ["Figma", "User Research", "Wireframing"]
+            tags: ["Figma", "User Research", "Wireframing"],
+            github: "https://github.com/sumeya-rajih",
+            demo: "#"
         }
     ];
 
@@ -91,12 +103,24 @@ const Projects = () => {
 
                                 {/* Overlay */}
                                 <div className="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                                    <button className="p-3 bg-white rounded-full text-dark hover:text-primary transition-colors">
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-3 bg-white rounded-full text-dark hover:text-primary transition-colors cursor-pointer"
+                                        title="View Code on GitHub"
+                                    >
                                         <BsGithub size={20} />
-                                    </button>
-                                    <button className="p-3 bg-white rounded-full text-dark hover:text-primary transition-colors">
+                                    </a>
+                                    <a
+                                        href={project.demo}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-3 bg-white rounded-full text-dark hover:text-primary transition-colors cursor-pointer"
+                                        title="View Live Demo"
+                                    >
                                         <BsArrowUpRight size={20} />
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
 

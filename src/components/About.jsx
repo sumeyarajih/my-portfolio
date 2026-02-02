@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaGithub, FaTwitter, FaDownload } from 'react-icons/fa';
 
 const About = () => {
     return (
@@ -29,19 +29,30 @@ const About = () => {
                             Whether it's building a complex mobile application with Flutter, crafting a responsive website with React, or designing a user-centric interface, I am dedicated to delivering high-quality results that solve real problems.
                         </p>
 
-                        <div className="flex gap-4">
-                            <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-all duration-300">
-                                <FaLinkedin size={20} />
+                        <div className="flex flex-col sm:flex-row gap-6 items-center">
+                            <a
+                                href="/cv.pdf"
+                                download
+                                className="btn-primary flex items-center gap-2"
+                            >
+                                <FaDownload />
+                                Download CV
                             </a>
-                            <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-all duration-300">
-                                <FaGithub size={20} />
-                            </a>
-                            <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-pink-600 hover:text-white transition-all duration-300">
-                                <FaInstagram size={20} />
-                            </a>
-                            <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-blue-400 hover:text-white transition-all duration-300">
-                                <FaTwitter size={20} />
-                            </a>
+
+                            <div className="flex gap-4">
+                                <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-all duration-300">
+                                    <FaLinkedin size={20} />
+                                </a>
+                                <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-all duration-300">
+                                    <FaGithub size={20} />
+                                </a>
+                                <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-pink-600 hover:text-white transition-all duration-300">
+                                    <FaInstagram size={20} />
+                                </a>
+                                <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-blue-400 hover:text-white transition-all duration-300">
+                                    <FaTwitter size={20} />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

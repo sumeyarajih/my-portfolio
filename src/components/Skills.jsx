@@ -38,7 +38,7 @@ const Skills = () => {
         },
         {
             title: "Video Editing",
-            description: "Professional video editing and post-production.",
+            description: "Professional video  editing and post-production.",
             skills: [
                 { name: "Adobe Premiere", level: 85 },
                 { name: "After Effects", level: 75 },
@@ -58,7 +58,7 @@ const Skills = () => {
 
             <div className="container mx-auto relative z-10">
                 <div className="mb-12">
-                    <h2 className="text-4xl font-header font-bold mb-4">My <span className="text-primary">Services</span></h2>
+                    <h2 className="text-4xl font-header font-bold mb-4">My <span className="text-primary">Skills</span></h2>
                     <p className="text-gray-400 max-w-2xl">
                         I offer a comprehensive range of design and development services to bring your ideas to life.
                     </p>
