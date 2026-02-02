@@ -10,16 +10,15 @@ const Footer = () => {
                         <p className="text-gray-400 text-lg max-w-md mb-8">
                             Open for opportunities in Full Stack Development and UI/UX Design.
                         </p>
-                        <a href="mailto:contact@sumeya.dev" className="btn-primary inline-block">
+                        <a href="sumeyarajih@gmail.com" className="btn-primary inline-block">
                             Say Hello 👋
                         </a>
                     </div>
 
                     <div className="flex flex-col gap-6 md:items-end">
-                        <a href="#" className="text-xl text-gray-300 hover:text-white hover:underline transition-all">LinkedIn</a>
-                        <a href="#" className="text-xl text-gray-300 hover:text-white hover:underline transition-all">GitHub</a>
-                        <a href="#" className="text-xl text-gray-300 hover:text-white hover:underline transition-all">Behance</a>
-                        <a href="#" className="text-xl text-gray-300 hover:text-white hover:underline transition-all">Twitter</a>
+                        <a href="https://www.linkedin.com/in/sumeya-rajih-1130a52b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-xl text-gray-300 hover:text-white hover:underline transition-all">LinkedIn</a>
+                        <a href="https://github.com/sumeyarajih" className="text-xl text-gray-300 hover:text-white hover:underline transition-all">GitHub</a>
+
                     </div>
                 </div>
 
