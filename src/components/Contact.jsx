@@ -41,7 +41,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-medium text-lg">Phone</h4>
-                                        <p className="text-gray-400">+123 456 7890</p>
+                                        <p className="text-gray-400">0960989364</p>
                                     </div>
                                 </div>
 
@@ -51,7 +51,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-medium text-lg">Email</h4>
-                                        <p className="text-gray-400">contact@sumeya.dev</p>
+                                        <p className="text-gray-400">sumeyarajih@gmail.com</p>
                                     </div>
                                 </div>
 
@@ -80,47 +80,60 @@ const Contact = () => {
                         viewport={{ once: false }}
                         className="p-10"
                     >
-                        <form className="space-y-6">
-                            <div>
-                                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-gray-50 focus:bg-white"
-                                    placeholder="John Doe"
-                                />
-                            </div>
+                     <form
+  action="https://formspree.io/f/xvzqbdel"
+  method="POST"
+  className="space-y-6"
+>
+  <div>
+    <label className="block text-sm font-medium text-gray-700 mb-2">
+      Your Name
+    </label>
+    <input
+      type="text"
+      name="name"
+      required
+      className="w-full px-4 py-3 rounded-lg border border-gray-300"
+      placeholder="John Doe"
+    />
+  </div>
 
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-gray-50 focus:bg-white"
-                                    placeholder="john@example.com"
-                                />
-                            </div>
+  <div>
+    <label className="block text-sm font-medium text-gray-700 mb-2">
+      Email Address
+    </label>
+    <input
+      type="email"
+      name="email"
+      required
+      className="w-full px-4 py-3 rounded-lg border border-gray-300"
+      placeholder="john@example.com"
+    />
+  </div>
 
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                                <textarea
-                                    id="message"
-                                    rows="4"
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-gray-50 focus:bg-white resize-none"
-                                    placeholder="Tell me about your project..."
-                                ></textarea>
-                            </div>
+  <div>
+    <label className="block text-sm font-medium text-gray-700 mb-2">
+      Message
+    </label>
+    <textarea
+      name="message"
+      rows="4"
+      required
+      className="w-full px-4 py-3 rounded-lg border border-gray-300 resize-none"
+      placeholder="Tell me about your project..."
+    />
+  </div>
 
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                type="submit"
-                                className="w-full btn-primary flex items-center justify-center gap-2"
-                            >
-                                Send Message
-                                <FaPaperPlane className="text-sm" />
-                            </motion.button>
-                        </form>
+  <motion.button
+    type="submit"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="w-full btn-primary flex items-center justify-center gap-2"
+  >
+    Send Message <FaPaperPlane />
+  </motion.button>
+</form>
+
                     </motion.div>
                 </div>
             </div>

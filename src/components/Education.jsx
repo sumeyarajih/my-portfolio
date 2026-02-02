@@ -6,16 +6,16 @@ const Education = () => {
     const education = [
         {
             degree: "Bachelor in Software Engineering",
-            school: "University of Technology",
-            year: "2019 - 2023",
+            school: "Dire Dawa University",
+            year: "2022 - 2026",
             description: "Focus on Mobile Development, Algorithms, and System Design. Graduated with honors."
         },
-        {
-            degree: "UI/UX Design Certification",
-            school: "Google Professional Certificate",
-            year: "2023",
-            description: "Intensive training on user research, wireframing, prototyping, and testing."
-        }
+        // {
+        //     degree: "UI/UX Design Certification",
+        //     school: "Google Professional Certificate",
+        //     year: "2023",
+        //     description: "Intensive training on user research, wireframing, prototyping, and testing."
+        // }
     ];
 
     const container = {

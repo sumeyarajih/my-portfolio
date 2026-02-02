@@ -8,7 +8,7 @@ const Skills = () => {
             description: "Creating intuitive and visually appealing user interfaces.",
             skills: [
                 { name: "Figma", level: 95 },
-                { name: "Adobe XD", level: 90 },
+                { name: "Adobe XD", level: 80 },
                 { name: "Prototyping", level: 85 },
                 { name: "User Research", level: 80 },
                 { name: "Wireframing", level: 90 },

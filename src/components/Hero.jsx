@@ -14,25 +14,29 @@ const Hero = () => {
                     <div className="inline-block px-3 py-1 bg-primary/10 text-primary font-bold rounded-full mb-4 text-sm tracking-wide uppercase">
                         Available for Freelance
                     </div>
-                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-header font-bold text-dark leading-tight mb-6">
-                        I am <span className="text-primary">
-                            <TypeAnimation
-                                sequence={[
-                                    'Sumeya Rajih',
-                                    1000,
-                                    'a UI/UX Designer',
-                                    1000,
-                                    'a Software Engineer',
-                                    1000,
-                                    'a Mobile Developer',
-                                    1000
-                                ]}
-                                wrapper="span"
-                                speed={50}
-                                repeat={Infinity}
-                            />
-                        </span>
-                    </h1>
+                   <h1 className="text-4xl md:text-5xl lg:text-7xl font-header font-bold text-dark leading-tight mb-6">
+  I am{' '}
+  <span className="text-primary">
+    <TypeAnimation
+      sequence={[
+        'Sumeya Rajih',
+        1000,
+        'a UI/UX Designer',
+        1000,
+        'a Software Engineer',
+        1000,
+        'a Mobile Developer',
+        1000,
+        'a Video Editor',
+        1000,
+      ]}
+      wrapper="span"
+      speed={50}
+      repeat={Infinity}
+    />
+  </span>
+</h1>
+
                     <p className="text-gray-600 text-lg md:text-xl mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
                         I design pixel-perfect interfaces, build robust mobile & web apps, and create compelling video content.
                     </p>
@@ -49,24 +53,24 @@ const Hero = () => {
                     <div className="mt-12 flex items-center justify-center lg:justify-start gap-8">
                         <div className="flex flex-col items-center lg:items-start">
                             <span className="text-3xl font-bold text-dark">
-                                <CountUp end={5} duration={3} />+
+                                <CountUp end={3} duration={3} />+
                             </span>
                             <span className="text-sm text-gray-500 uppercase tracking-wide">Years Exp</span>
                         </div>
                         <div className="w-px h-10 bg-gray-300"></div>
                         <div className="flex flex-col items-center lg:items-start">
                             <span className="text-3xl font-bold text-dark">
-                                <CountUp end={50} duration={3} />+
+                                <CountUp end={15} duration={3} />+
                             </span>
                             <span className="text-sm text-gray-500 uppercase tracking-wide">Projects</span>
                         </div>
                         <div className="w-px h-10 bg-gray-300"></div>
-                        <div className="flex flex-col items-center lg:items-start">
+                        {/* <div className="flex flex-col items-center lg:items-start">
                             <span className="text-3xl font-bold text-dark">
                                 <CountUp end={20} duration={3} />+
                             </span>
                             <span className="text-sm text-gray-500 uppercase tracking-wide">Clients</span>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 

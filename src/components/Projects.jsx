@@ -7,7 +7,7 @@ const Projects = () => {
 
     const projects = [
         {
-            title: "Mobile E-Commerce App",
+            title: "Food Recipe App",
             category: "Mobile",
             image: "📱",
             description: "A complete mobile shopping experience with cart and payment integration using Flutter.",

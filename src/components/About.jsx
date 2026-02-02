@@ -39,12 +39,13 @@ const About = () => {
                             I am Sumeya Rajih Abass, a multi-disciplinary developer and designer. With a background in both software engineering and UI/UX design, I bring a unique perspective to every project.
                         </p>
                         <p className="text-gray-600 leading-relaxed mb-8">
-                            Whether it's building a complex mobile application with Flutter, crafting a responsive website with React, or designing a user-centric interface, I am dedicated to delivering high-quality results that solve real problems.
+                            Whether it's building a complex mobile application with Flutter, crafting a responsive website with React, Laravel, or designing a user-centric interface, I am dedicated to delivering high-quality results that solve real problems also creating and editing video contents.
                         </p>
+                        
 
                         <div className="flex flex-col sm:flex-row gap-6 items-center">
                             <a
-                                href="/cv.pdf"
+                                href="/sumeya cv1.pdf"
                                 download
                                 className="btn-primary flex items-center gap-2"
                             >
@@ -53,17 +54,14 @@ const About = () => {
                             </a>
 
                             <div className="flex gap-4">
-                                <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-all duration-300">
+                                <a href="https://www.linkedin.com/in/sumeya-rajih-1130a52b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-all duration-300">
                                     <FaLinkedin size={20} />
                                 </a>
-                                <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-all duration-300">
+                                <a href="https://github.com/sumeyarajih" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-all duration-300">
                                     <FaGithub size={20} />
                                 </a>
-                                <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-pink-600 hover:text-white transition-all duration-300">
+                                <a href="https://www.instagram.com/sumeya_rajih?igsh=MWQ5ZDYwcWE3Y2FjeQ==" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-pink-600 hover:text-white transition-all duration-300">
                                     <FaInstagram size={20} />
-                                </a>
-                                <a href="#" className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-blue-400 hover:text-white transition-all duration-300">
-                                    <FaTwitter size={20} />
                                 </a>
                             </div>
                         </div>
