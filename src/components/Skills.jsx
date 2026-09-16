@@ -8,7 +8,6 @@ const Skills = () => {
             description: "Creating intuitive and visually appealing user interfaces.",
             skills: [
                 { name: "Figma", level: 95 },
-                { name: "Adobe XD", level: 80 },
                 { name: "Prototyping", level: 85 },
                 { name: "User Research", level: 80 },
                 { name: "Wireframing", level: 90 },
@@ -19,9 +18,11 @@ const Skills = () => {
             description: "Building responsive and robust web applications.",
             skills: [
                 { name: "React.js", level: 90 },
+                  { name: "Node.js", level: 90 },
+                 { name: "Next.js", level: 85 },
+                  { name: "Node.js", level: 90 },
                 { name: "Vue.js", level: 85 },
-                { name: "Laravel", level: 80 },
-                { name: "Tailwind CSS", level: 95 },
+                  { name: "Tailwind CSS", level: 95 },
                 { name: "MySQL / PostgreSQL", level: 75 },
             ]
         },
@@ -36,16 +37,7 @@ const Skills = () => {
                 { name: "State Management", level: 85 },
             ]
         },
-        {
-            title: "Video Editing",
-            description: "Professional video  editing and post-production.",
-            skills: [
-                { name: "Adobe Premiere", level: 85 },
-                { name: "After Effects", level: 75 },
-                { name: "Color Grading", level: 80 },
-                { name: "Motion Graphics", level: 70 },
-            ]
-        }
+        
     ];
 
     return (

@@ -6,13 +6,19 @@ const Experience = () => {
          {
             role: "Full Stack Developer",
             company: "Dire Dawa American Corner",
-            period: "2025 - present",
+            period: "oct 2025 - may 2026",
             description: "Developed and maintained multiple client websites using laravel, Vue, and implemented database solutions with mysql."
+        },
+        {
+            role: "Mobile App Developer",
+            company: "Dire Dawa American Corner",
+            period: "oct 2025 - may 2026",
+            description: "Developed and maintained Mobile App using Flutter,  and implemented database solutions with supabase."
         },
         {
             role: "Mobile App Developer (Flutter)",
             company: "AIT Technology.",
-            period: "feb 2025 - septemper",
+            period: "feb 2025 - sep 2025",
             description: "Leading the mobile development team using Flutter and integrating with node.js backend APIs."
         },
        

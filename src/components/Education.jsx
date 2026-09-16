@@ -4,18 +4,36 @@ import { motion } from 'framer-motion';
 
 const Education = () => {
     const education = [
-        {
-            degree: "Bachelor in Software Engineering",
-            school: "Dire Dawa University",
-            year: "2022 - 2026",
-            description: "Focus on Mobile Development, Algorithms, and System Design. Graduated with honors."
-        },
-        // {
-        //     degree: "UI/UX Design Certification",
-        //     school: "Google Professional Certificate",
-        //     year: "2023",
-        //     description: "Intensive training on user research, wireframing, prototyping, and testing."
-        // }
+       {
+    degree: "Bachelor in Software Engineering",
+    school: "Dire Dawa University",
+    year: "2022 - 2026",
+    description: "Studied software engineering with a focus on mobile application development, algorithms, data structures, software architecture, and system design. Developed practical skills through academic projects and hands-on software development."
+},
+{
+    degree: "AiCE Certification",
+    school: "ALX Ethiopia",
+    year: "2024",
+    description: "Completed training in AI Career Essentials, covering artificial intelligence fundamentals, digital productivity, problem-solving, and the practical use of AI tools in professional environments."
+},
+{
+    degree: "Android Kotlin Development Fundamentals Certification",
+    school: "Udacity",
+    year: "2024",
+    description: "Completed hands-on training in Android development using Kotlin, covering Android fundamentals, user interfaces, activities, layouts, data handling, and building functional mobile applications."
+},
+{
+    degree: "Internship Certification",
+    school: "AIT Technology",
+    year: "2025",
+    description: "Gained practical  experience in Mobile Application development, designing Application using Figma."
+},{
+degree: "Flutter Certification",
+school: "Cursa",
+year: "2026",
+description: "Completed hands-on training in Flutter and Dart for cross-platform mobile application development, with practical experience building responsive user interfaces and applying UI/UX design principles using Figma."
+}
+
     ];
 
     const container = {

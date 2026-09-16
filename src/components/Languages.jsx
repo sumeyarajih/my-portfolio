@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 const Languages = () => {
     // Refined list
     const data = [
-        { name: "English", level: 75, color: "bg-[#b46a45]" },
-        { name: "Harari", level: 100, color: "bg-[#b46a45]" },
-        { name: "Arabic", level: 85, color: "bg-[#b46a45]" },
+        { name: "English", level: 70, color: "bg-[#b46a45]" },
+        { name: "Harari", level: 95, color: "bg-[#b46a45]" },
+        { name: "Arabic", level: 80, color: "bg-[#b46a45]" },
         { name: "Amharic", level: 95, color: "bg-[#b46a45]" },
-        { name: "Somali", level: 80, color: "bg-[#b46a45]" },
+        { name: "Somali", level: 65, color: "bg-[#b46a45]" },
     ];
 
     const container = {

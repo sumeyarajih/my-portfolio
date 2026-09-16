@@ -39,13 +39,13 @@ const About = () => {
                             I am Sumeya Rajih Abass, a multi-disciplinary developer and designer. With a background in both software engineering and UI/UX design, I bring a unique perspective to every project.
                         </p>
                         <p className="text-gray-600 leading-relaxed mb-8">
-                            Whether it's building a complex mobile application with Flutter, crafting a responsive website with React, Laravel, or designing a user-centric interface, I am dedicated to delivering high-quality results that solve real problems also creating and editing video contents.
+                            Whether it's building a complex mobile application with Flutter, crafting a responsive website with React, Laravel, or designing a user-centric interface, I am dedicated to delivering high-quality results that solve real problems.
                         </p>
                         
 
                         <div className="flex flex-col sm:flex-row gap-6 items-center">
                             <a
-                                href="/sumeya cv1.pdf"
+                                href="/Sumeya_Rajih_CV (10).pdf"
                                 download
                                 className="btn-primary flex items-center gap-2"
                             >

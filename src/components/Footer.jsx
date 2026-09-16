@@ -8,7 +8,7 @@ const Footer = () => {
                     <div>
                         <h2 className="text-4xl md:text-5xl font-header font-bold mb-6">Let's build something <br /><span className="text-primary">amazing</span> together.</h2>
                         <p className="text-gray-400 text-lg max-w-md mb-8">
-                            Open for opportunities in Full Stack Development and UI/UX Design.
+                            Open for opportunities in Full Stack Development  Mobile Application developer and UI/UX Design.
                         </p>
                         <a href="sumeyarajih@gmail.com" className="btn-primary inline-block">
                             Say Hello 👋

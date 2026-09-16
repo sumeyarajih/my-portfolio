@@ -27,8 +27,6 @@ const Hero = () => {
         1000,
         'a Mobile Developer',
         1000,
-        'a Video Editor',
-        1000,
       ]}
       wrapper="span"
       speed={50}
@@ -38,7 +36,7 @@ const Hero = () => {
 </h1>
 
                     <p className="text-gray-600 text-lg md:text-xl mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                        I design pixel-perfect interfaces, build robust mobile & web apps, and create compelling video content.
+                        I design pixel-perfect interfaces, build robust mobile & web apps.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -105,14 +103,14 @@ const Hero = () => {
                         </div>
 
                         {/* 2. Video Editing (Top Right) */}
-                        <div className="absolute top-0 right-0 md:top-10 md:-right-8 bg-white p-2 rounded-2xl shadow-xl animate-float delay-1000 scale-75 md:scale-100 hidden sm:block">
+                        {/* <div className="absolute top-0 right-0 md:top-10 md:-right-8 bg-white p-2 rounded-2xl shadow-xl animate-float delay-1000 scale-75 md:scale-100 hidden sm:block">
                             <div className="w-28 h-16 md:w-32 md:h-20 rounded-lg border border-gray-200 overflow-hidden bg-gray-900 relative flex items-center justify-center group">
                                 <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                                     <FaPlay className="text-white text-xs ml-0.5" />
                                 </div>
                             </div>
                             <p className="text-xs font-semibold text-center mt-2 text-purple-600">Video Editing</p>
-                        </div>
+                        </div> */}
 
                         {/* 3. Web Dev (Bottom Left) */}
                         <div className="absolute bottom-0 left-0 md:bottom-12 md:-left-10 bg-white p-2 text-left rounded-2xl shadow-xl animate-float delay-2000 scale-75 md:scale-100 hidden sm:block">
