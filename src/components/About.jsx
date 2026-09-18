@@ -45,7 +45,7 @@ const About = () => {
 
                         <div className="flex flex-col sm:flex-row gap-6 items-center">
                             <a
-                                href="/Sumeya_Rajih_CV (10).pdf"
+                                href="/Sumeya_Rajih_Abass_CV.pdf"
                                 download
                                 className="btn-primary flex items-center gap-2"
                             >
