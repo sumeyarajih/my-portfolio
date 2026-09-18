@@ -7,62 +7,125 @@ const Projects = () => {
 
     const projects = [
         {
-            title: "Food Recipe App",
+            title: "pregnancy-App",
             category: "Mobile",
-            image: "📱",
-            description: "A complete mobile shopping experience with cart and payment integration using Flutter.",
-            tags: ["Flutter", "Dart", "Firebase"],
+            image: ["/pregnanacy-image1.jpg", "/pregnanacy-image2.jpg"],
+            description: "A mobile app for pregnancy tracking and information.",
+            tags: ["Flutter", "Node.js", "Postgres"],
             github: "https://github.com/sumeya-rajih",
-            demo: "#"
+            demo: ""
         },
         {
-            title: "Corporate Dashboard",
+            title: "arifacademy app",
+            category: "Mobile",
+            image: ["/arif-academy-image1.jpg", "/arif-academy-image2.jpg"],
+            description: "An educational mobile app for Arif Academy.",
+            tags: ["Flutter", "Node.js", "Postgres"],
+            github: "https://github.com/sumeya-rajih",
+            demo: ""
+        },
+        {
+            title: "orderUP App",
+            category: "Mobile",
+            image: ["/order-image1.jpg", "/order-image2.jpg"],
+            description: "A mobile app for ordering food or items.",
+            tags: ["React Native", "Node.js", "Postgres"],
+            github: "https://github.com/sumeya-rajih",
+            demo: ""
+        },
+        {
+            title: "lostfound App",
+            category: "Mobile",
+            image: ["/lostfound-image1.jpg", "/lostfound-image2.jpg"],
+            description: "A mobile app to report and find lost items.",
+            tags: ["Supabase", "Flutter"],
+            github: "https://github.com/sumeya-rajih",
+            demo: ""
+        },
+        {
+            title: "polychat",
+            category: "Mobile",
+            image: ["/polychat-image1.jpg", "/ploychat-image2.jpg"],
+            description: "A mobile chat application for real-time communication.",
+            tags: ["Firebase", "Flutter"],
+            github: "https://github.com/sumeya-rajih",
+            demo: ""
+        },
+        {
+            title: "ASK AI App",
+            category: "Mobile",
+            image: ["/Askai-image1.jpg"],
+            description: "An AI-powered mobile application for asking questions.",
+            tags: ["Python", "Flutter", "Postgres"],
+            github: "https://github.com/sumeya-rajih",
+            demo: ""
+        },
+        {
+            title: "food recipe",
+            category: "Mobile",
+            image: ["/foodrecipe-image1.jpg", "/foodrecipe-image2.jpg"],
+            description: "A mobile app for discovering and sharing food recipes.",
+            tags: ["Node.js", "Flutter"],
+            github: "https://github.com/sumeya-rajih",
+            demo: ""
+        },
+        {
+            title: "hicafe system",
             category: "Website",
-            image: "💻",
-            description: "Admin panel for managing company resources and analytics visualization with React & Laravel.",
-            tags: ["React", "Laravel", "MySQL", "Tailwind"],
+            image: "/hicafe system.jpg",
+            description: "A web-based system for managing cafe operations.",
+            tags: ["React.js", "Node.js", "Postgres"],
             github: "https://github.com/sumeya-rajih",
-            demo: "#"
+            demo: ""
         },
         {
-            title: "Portfolio Design System",
-            category: "UI/UX",
-            image: "🎨",
-            description: "A comprehensive design system created in Figma for a client portfolio.",
-            tags: ["Figma", "Prototyping", "Design System"],
-            github: "https://github.com/sumeya-rajih",
-            demo: "#"
-        },
-        {
-            title: "Recipe Sharing Platform",
+            title: "hicafe website",
             category: "Website",
-            image: "🍲",
-            description: "Social platform for chefs to share and rate recipes built with Vue.js.",
-            tags: ["Vue", "Node.js", "PostgreSQL"],
+            image: "/hicafe web.jpg",
+            description: "The official website for Hicafe.",
+            tags: ["React"],
             github: "https://github.com/sumeya-rajih",
-            demo: "#"
+            demo: ""
         },
         {
-            title: "Cinematic Travel Vlog",
-            category: "Video",
-            image: "🎬",
-            description: "High-energy travel vlog with advanced color grading and motion graphics.",
-            tags: ["Premiere Pro", "After Effects", "Color Grading"],
+            title: "wedding card digital",
+            category: "Website",
+            image: "/wedding card.jpg",
+            description: "A platform for creating digital wedding invitations.",
+            tags: ["React", "Node.js", "Supabase"],
             github: "https://github.com/sumeya-rajih",
-            demo: "#"
+            demo: ""
         },
         {
-            title: "Finance App Redesign",
+            title: "gorgor gym",
+            category: "Website",
+            image: "/gorgor gym web.jpg",
+            description: "A website for Gorgor Gym.",
+            tags: [],
+            github: "https://github.com/sumeya-rajih",
+            demo: ""
+        },
+        {
+            title: "arif academy",
             category: "UI/UX",
-            image: "💳",
-            description: "Modern UI redesign for a fintech application focusing on user accessibility.",
-            tags: ["Figma", "User Research", "Wireframing"],
+            image: "/figma arif.jpg",
+            description: "UI and UX design for the Arif Academy platform.",
+            tags: ["Figma"],
             github: "https://github.com/sumeya-rajih",
-            demo: "#"
+            demo: ""
+        },
+        {
+            title: "pregnanacy App",
+            category: "UI/UX",
+            image: "/figma pregnanacy.jpg",
+            description: "UI and UX design for a pregnancy tracking application.",
+            tags: ["Figma"],
+            github: "https://github.com/sumeya-rajih",
+            demo: ""
         }
     ];
 
-    const categories = ["All", "Mobile", "Website", "UI/UX", "Video"];
+    const categories = ["All", "Mobile", "Website", "UI/UX"];
 
     const filteredProjects = activeCategory === "All"
         ? projects
@@ -137,8 +200,24 @@ const Projects = () => {
                             className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col"
                         >
                             {/* Image Placeholder */}
-                            <div className="h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative overflow-hidden group-hover:bg-gray-200 transition-colors">
-                                <div className="text-6xl transform group-hover:scale-110 transition-transform duration-500">{project.image}</div>
+                            <div className="h-64 bg-gray-100 flex items-center justify-center relative overflow-hidden group-hover:bg-gray-200 transition-colors">
+                                {Array.isArray(project.image) ? (
+                                    <div className="flex justify-center items-center gap-4 h-full transform group-hover:scale-105 transition-transform duration-500 w-full relative">
+                                        {/* Background blur effect for mobile mockups */}
+                                        <div className="absolute inset-0 bg-primary/5 blur-xl"></div>
+                                        {project.image.map((img, i) => (
+                                            <div key={i} className={`relative w-[90px] h-[180px] border-[4px] border-gray-800 rounded-[1.2rem] overflow-hidden bg-black shadow-xl z-10 ${project.image.length === 2 ? (i === 1 ? 'mt-8 rotate-3' : '-mt-8 -rotate-3') : ''}`}>
+                                                {/* Notch */}
+                                                <div className="absolute top-0 inset-x-0 h-3 bg-gray-800 rounded-b-lg w-[40px] mx-auto z-20"></div>
+                                                <img src={img} className="w-full h-full object-cover" alt="" />
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : typeof project.image === 'string' && (project.image.startsWith('/') || project.image.startsWith('http')) ? (
+                                    <img src={project.image} alt={project.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                                ) : (
+                                    <div className="text-6xl transform group-hover:scale-110 transition-transform duration-500">{project.image}</div>
+                                )}
 
                                 {/* Overlay (Desktop) */}
                                 <div className="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex items-center justify-center gap-4">
@@ -151,15 +230,17 @@ const Projects = () => {
                                     >
                                         <BsGithub size={20} />
                                     </a>
-                                    <a
-                                        href={project.demo}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="p-3 bg-white rounded-full text-dark hover:text-primary transition-colors cursor-pointer"
-                                        title="View Live Demo"
-                                    >
-                                        <BsArrowUpRight size={20} />
-                                    </a>
+                                    {project.demo && (
+                                        <a
+                                            href={project.demo}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-3 bg-white rounded-full text-dark hover:text-primary transition-colors cursor-pointer"
+                                            title="View Live Demo"
+                                        >
+                                            <BsArrowUpRight size={20} />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
 
@@ -182,9 +263,11 @@ const Projects = () => {
                                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn-outline text-xs py-2 px-3 rounded-full flex items-center gap-2">
                                         <BsGithub /> Code
                                     </a>
-                                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs py-2 px-3 rounded-full flex items-center gap-2">
-                                        <BsArrowUpRight /> Live
-                                    </a>
+                                    {project.demo && (
+                                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs py-2 px-3 rounded-full flex items-center gap-2">
+                                            <BsArrowUpRight /> Live
+                                        </a>
+                                    )}
                                 </div>
 
                                 <div className="mt-auto flex flex-wrap gap-2">
